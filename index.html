@@ -10,8 +10,219 @@
   <meta name="author" content="Programar é Fácil">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
+
+<style>
+    /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* BASE */
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: relative;
+}
+
+.logo {
+  height: 60px;
+}
+
+/* NAV DESKTOP */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  font-weight: bold;
+  padding: 8px 0;
+}
+
+nav a:hover {
+  color: #006acf;
+}
+
+/* MENU HAMBURGUER */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #006acf;
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+button {
+  background-color: #006acf;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.section h2 {
+  color: #006acf;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #006acf;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #050505;
+}
+
+/* CTA */
+.cta button {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  background-color: #050505;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* ANIMAÇÕES */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================== */
+/* RESPONSIVO (MOBILE)   */
+/* ===================== */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .header {
+    padding: 20px;
+  }
+
+  /* MENU MOBILE */
+  nav {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background-color: #000;        /* fundo preto */
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;       /* 👈 NÃO centraliza */
+    padding: 20px;
+    border-top: 1px solid #006acf;
+    z-index: 1000;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 1.1rem;
+    text-align: left;              /* 👈 texto alinhado */
+    border-bottom: 1px solid #111;
+  }
+
+  nav a:last-child {
+    border-bottom: none;
+  }
+
+  nav a:hover {
+    background-color: #006acf;
+    color: #fff;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* HERO */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 60px 20px;
+  }
+
+  /* BUTTONS */
+  button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+</style>
 
 <body>
 
@@ -68,6 +279,6 @@
   <p>© 2026 Programar é Fácil • Todos os direitos reservados</p>
 </footer>
 
-<script src="../js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
