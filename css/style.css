@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: relative;
+}
+
+.logo {
+  height: 60px;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #006acf;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #006acf;
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+button {
+  background-color: #006acf;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.section h2 {
+  color: #006acf;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #006acf;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #050505;
+}
+
+/* CTA */
+.cta button {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  background-color: #050505;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ANIMAÇÕES */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+  .header {
+    padding: 20px;
+  }
+
+  nav {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background-color: #000;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+    border-top: 1px solid #006acf;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    margin: 15px 0;
+    font-size: 1.1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 60px 20px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
