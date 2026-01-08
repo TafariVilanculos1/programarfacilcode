@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +6,7 @@
   font-family: Arial, sans-serif;
 }
 
+/* BASE */
 body {
   background-color: #000;
   color: #fff;
@@ -13,6 +15,11 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* HEADER */
@@ -28,24 +35,27 @@ img {
   height: 60px;
 }
 
+/* NAV DESKTOP */
 nav {
   display: flex;
+  gap: 20px;
 }
 
 nav a {
-  color: #fff;
-  margin-left: 20px;
   font-weight: bold;
+  padding: 8px 0;
 }
 
 nav a:hover {
   color: #006acf;
 }
 
+/* MENU HAMBURGUER */
 .menu-toggle {
   display: none;
   font-size: 2rem;
   cursor: pointer;
+  user-select: none;
 }
 
 /* HERO */
@@ -74,7 +84,7 @@ button {
 }
 
 button:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 /* SECTIONS */
@@ -114,13 +124,14 @@ footer {
   background-color: #050505;
   text-align: center;
   padding: 20px;
+  font-size: 0.9rem;
 }
 
 /* ANIMAÇÕES */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 .fade-in.show {
@@ -128,24 +139,29 @@ footer {
   transform: translateY(0);
 }
 
-/* RESPONSIVO */
+/* ===================== */
+/* RESPONSIVO (MOBILE)   */
+/* ===================== */
 @media (max-width: 768px) {
 
+  /* HEADER */
   .header {
     padding: 20px;
   }
 
+  /* MENU MOBILE */
   nav {
     position: absolute;
     top: 80px;
     right: 0;
     width: 100%;
-    background-color: #000;
-    flex-direction: column;
-    align-items: center;
+    background-color: #000;        /* fundo preto */
     display: none;
-    padding: 20px 0;
+    flex-direction: column;
+    align-items: flex-start;       /* 👈 NÃO centraliza */
+    padding: 20px;
     border-top: 1px solid #006acf;
+    z-index: 1000;
   }
 
   nav.active {
@@ -153,22 +169,37 @@ footer {
   }
 
   nav a {
-    margin: 15px 0;
+    width: 100%;
+    padding: 12px 10px;
     font-size: 1.1rem;
+    text-align: left;              /* 👈 texto alinhado */
+    border-bottom: 1px solid #111;
+  }
+
+  nav a:last-child {
+    border-bottom: none;
+  }
+
+  nav a:hover {
+    background-color: #006acf;
+    color: #fff;
   }
 
   .menu-toggle {
     display: block;
   }
 
+  /* HERO */
   .hero h1 {
     font-size: 2rem;
   }
 
+  /* SECTIONS */
   .section {
     padding: 60px 20px;
   }
 
+  /* BUTTONS */
   button {
     width: 100%;
     max-width: 280px;
